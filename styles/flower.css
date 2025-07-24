@@ -113,7 +113,7 @@ nav,
 .plant-description {
     font-weight: 400;
     font-size: 1.3rem;
-    width: 1000px;
+    max-width: 1000px;
     margin: auto;
     margin-bottom: 50px;
 }
@@ -122,9 +122,8 @@ nav,
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 60px;
-    height: 485px;
-    width: 300px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .image-type {
@@ -156,9 +155,15 @@ nav,
         display: none;
     }
 
-    nav {
+    /* nav {
         margin-right: 0;
         padding-right: 0;
+    } */
+
+    .mobile-view {
+        justify-content: end;
+        display: flex;
+        margin-right: auto;
     }
 
     .navbar img {
@@ -189,11 +194,13 @@ nav,
 
     .plant-description {
         font-size: 1rem;
-        width: 390px;
     }
 
     .image-container {
         grid-template-columns: repeat(2, 1fr);
-        /* width: 100%; */
+        gap: 10px;
+        margin: 0 auto;
     }
+
+
 }
