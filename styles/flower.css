@@ -59,6 +59,10 @@ nav,
 }
 
 /* header styles */
+header {
+    margin: 50px 0 120px 0;
+}
+
 /* navbar related styles */
 .navbar {
     justify-content: space-between;
@@ -162,7 +166,7 @@ nav,
 }
 
 .about-description li {
-    margin-top: 16px;
+    margin-top: 40px;
     font-size: 1.1rem;
 }
 
@@ -183,9 +187,215 @@ nav,
     height: auto;
 }
 
+/* deals section style */
+.deals-container {
+    text-align: center;
+}
+
+.deals-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.deals-description {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 888px;
+    margin: 0 auto;
+}
+
+.deals-big {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.deals-image {
+    max-width: 1140px;
+    justify-content: space-between;
+    margin: 120px auto;
+}
+
+.deals-bloom {
+    background-image: url(../assets/deal-bloom.png);
+}
+
+.deals-ana {
+    background-image: url(../assets/deal-ana.png);
+}
+
+.deals-bloom,
+.deals-ana {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    width: 366px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.deals-zabo {
+    background-image: url(../assets/deal-zabo.png);
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    width: 710px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.deals-zabo .shop-now {
+    font-size: 1.2rem;
+}
+
+.deals-bloom,
+.deals-ana,
+.deals-zabo {
+    position: relative;
+    /* So child overlay knows where to go */
+    overflow: hidden;
+    /* Keep everything inside the box */
+}
+
+/* This adds the dimming layer */
+.deals-bloom::before,
+.deals-ana::before,
+.deals-zabo::before {
+    content: "";
+    /* Makes the layer exist */
+    position: absolute;
+    inset: 0;
+    /* Stretches the layer to cover entire box */
+    background: rgba(0, 0, 0, 0.4);
+    /* Dark layer with 40% opacity */
+    z-index: 0;
+    /* Sends it behind the text */
+}
+
+/* Make sure your text stays on top */
+.deals-bloom>*,
+.deals-ana>*,
+.deals-zabo>* {
+    position: relative;
+    z-index: 1;
+}
+
+.shop-now {
+    text-decoration: underline;
+}
+
+/* subscribe styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.subscribe {
+    background-image: url('../assets/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 533px;
+    color: white;
+
+}
+
+.sub-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+
+}
+
+.sub-input {
+    width: 655px;
+    height: 50px;
+    padding-left: 20px;
+}
+
+.sub-button {
+    width: 186px;
+    height: auto;
+    background-color: #E95A08;
+    border: none;
+    color: white;
+}
+
+/* footer styles */
+.footer-container {
+    justify-content: space-between;
+    max-width: 1140px;
+    height: 248px;
+    margin: 50px auto;
+}
+
+footer div li {
+    list-style: none;
+}
+
+footer div li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: .9rem;
+    transition: color 0.3s ease;
+    gap: 20px;
+}
+
+footer div li a:hover {
+    color: #555;
+}
+
+footer div img {
+    height: 36px;
+    width: 36px;
+}
+
+.footer-logo {
+    width: 135px;
+    height: 82px;
+}
+
+.footer-one {
+    width: 353px;
+    height: 179px;
+}
+
+.footer-icons {
+    gap: 25px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+}
+
+.twitter {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+}
+
 /* Responsive media query */
 @media screen and (max-width:576px) {
-
     .hide {
         display: none;
     }
@@ -255,9 +465,70 @@ nav,
 
     .about {
         flex-direction: column;
+        margin-top: 35px;
     }
 
     .about-description ul {
         font-size: 1rem;
     }
+
+
+    .deals-image {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .deals-big {
+        width: 100%;
+        align-items: center;
+    }
+
+    .deals-bloom,
+    .deals-ana,
+    .deals-zabo {
+        width: 90%;
+        max-width: 100%;
+        height: 180px;
+        padding: 20px;
+        border-radius: 15px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+
+    .subscribe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sub-title {
+        font-size: 1.2rem;
+    }
+
+    .sub-input {
+        width: 250px;
+    }
+
+    .sub-button {
+        width: 103px;
+    }
+
+    footer {
+        margin: 50px 20px;
+    }
+
+    footer>div {
+        flex-direction: column;
+    }
+
+    footer div ul,
+    .footer-icons {
+        margin-bottom: 32px;
+    }
+
+    .footer-container {
+        margin: 0
+    }
+
 }
