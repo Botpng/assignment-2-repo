@@ -23,7 +23,7 @@ body {
 
 nav,
 .plants {
-    max-width: 1440px;
+    max-width: 1140px;
     margin: auto;
 }
 
@@ -45,10 +45,17 @@ nav,
 
 .text-gray {
     color: rgba(0, 0, 0, 0.5);
+
 }
 
 .text-orange {
     color: #E95A08;
+}
+
+.text-size {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 /* header styles */
@@ -59,7 +66,7 @@ nav,
 
 .nav-item {
     list-style-type: none;
-    margin-right: 48px;
+    margin-right: 24px;
 }
 
 .nav-links {
@@ -67,8 +74,9 @@ nav,
 }
 
 .navbar,
-.banner {
-    max-width: 1440px;
+.banner,
+.about {
+    max-width: 1140px;
     margin: auto;
 }
 
@@ -96,10 +104,6 @@ nav,
     padding: 0;
 }
 
-.banner-description {
-    font-size: 1.3rem;
-}
-
 /* plant related styles */
 .plant-container {
     text-align: center;
@@ -111,8 +115,6 @@ nav,
 }
 
 .plant-description {
-    font-weight: 400;
-    font-size: 1.3rem;
     max-width: 1000px;
     margin: auto;
     margin-bottom: 50px;
@@ -121,7 +123,7 @@ nav,
 .image-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 60px;
+    gap: 30px;
     text-align: center;
     margin: 0 auto;
 }
@@ -129,13 +131,13 @@ nav,
 .image-type {
     font-weight: 500;
     font-size: 1.2rem;
-    margin: 20px 65px 0px 65px;
+    margin: 20px 35px 0px 35px;
 }
 
 .image-price {
     font-weight: bold;
     font-size: 1.2rem;
-    margin: 16px 90px;
+    margin: 16px 55px;
 }
 
 .btn-buy {
@@ -148,17 +150,45 @@ nav,
     color: white;
 }
 
+/* about styles */
+.about {
+    margin: 210px auto;
+    justify-content: space-between;
+}
+
+.about-description {
+    max-width: 540px;
+    margin-right: 20px;
+}
+
+.about-description li {
+    margin-top: 16px;
+    font-size: 1.1rem;
+}
+
+.about-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#image-badge {
+    height: 286px;
+    width: 286px;
+    margin-left: -200px;
+    margin-top: -130px;
+}
+
+#image-flower {
+    width: auto;
+    height: auto;
+}
+
 /* Responsive media query */
 @media screen and (max-width:576px) {
 
     .hide {
         display: none;
     }
-
-    /* nav {
-        margin-right: 0;
-        padding-right: 0;
-    } */
 
     .mobile-view {
         justify-content: end;
@@ -202,5 +232,32 @@ nav,
         margin: 0 auto;
     }
 
+    .image-container>div {
+        width: 100%;
+    }
 
+    .image-container img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .image-price,
+    .image-type {
+        margin: 10px auto;
+        font-size: 1rem;
+    }
+
+    .btn-buy {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-description ul {
+        font-size: 1rem;
+    }
 }
