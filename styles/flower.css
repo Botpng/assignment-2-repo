@@ -260,31 +260,25 @@ header {
     font-size: 1.2rem;
 }
 
+/* took help from internet and ai  */
 .deals-bloom,
 .deals-ana,
 .deals-zabo {
     position: relative;
-    /* So child overlay knows where to go */
     overflow: hidden;
-    /* Keep everything inside the box */
 }
 
-/* This adds the dimming layer */
+
 .deals-bloom::before,
 .deals-ana::before,
 .deals-zabo::before {
     content: "";
-    /* Makes the layer exist */
     position: absolute;
     inset: 0;
-    /* Stretches the layer to cover entire box */
     background: rgba(0, 0, 0, 0.4);
-    /* Dark layer with 40% opacity */
     z-index: 0;
-    /* Sends it behind the text */
 }
 
-/* Make sure your text stays on top */
 .deals-bloom>*,
 .deals-ana>*,
 .deals-zabo>* {
@@ -400,6 +394,19 @@ footer div img {
         display: none;
     }
 
+    nav,
+    .banner,
+    .plants,
+    .about,
+    .deals-image,
+    .deals-big,
+    footer,
+    .footer-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
     .mobile-view {
         justify-content: end;
         display: flex;
@@ -468,10 +475,23 @@ footer div img {
         margin-top: 35px;
     }
 
-    .about-description ul {
-        font-size: 1rem;
+    #image-flower {
+        width: 100%;
+        height: auto;
+        max-width: 540px;
+        margin: 0 auto 20px auto;
+        display: block;
     }
 
+    .about-description {
+        max-width: 100%;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .about-description ul li {
+        font-size: 1.3rem;
+    }
 
     .deals-image {
         flex-direction: column;
@@ -496,8 +516,8 @@ footer div img {
         text-align: center;
     }
 
-
     .subscribe {
+        margin: 0;
         width: 100%;
         height: 100%;
     }
@@ -515,11 +535,15 @@ footer div img {
     }
 
     footer {
-        margin: 50px 20px;
+        /* margin: 50px 20px; */
     }
 
     footer>div {
         flex-direction: column;
+    }
+
+    .footer-one p {
+        padding-bottom: 10px;
     }
 
     footer div ul,
@@ -528,7 +552,7 @@ footer div img {
     }
 
     .footer-container {
-        margin: 0
+        /* margin: 0 */
     }
 
 }
